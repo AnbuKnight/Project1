@@ -1,0 +1,60 @@
+table {
+    width: 100%;    
+ }
+ .col1Image
+ {
+    width: 20%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+ }
+ .mat-column-column1
+ {
+    flex: 0 0 11% !important;
+ }
+ .mat-column-Filesize
+ {
+    justify-content: center;
+ }
+ .mat-column-Dependency
+ {
+    justify-content: center;
+ }
+ .mat-column-Accuracy
+ {
+    justify-content: center;
+ }
+ .Action1
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+ }
+ .Action2
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+ }
+ .Action3
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+ }
+ .mat-table.mat-table.cdk-table
+ {
+    background: rgba(0, 0, 0, 0);
+ }
+ ::ng-deep .mat-paginator-container {
+    background-color: lightgray !important;
+}
+
+.mat-row:hover {
+   background-color: white;
+ }

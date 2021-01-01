@@ -1,0 +1,54 @@
+<mat-card class="page-margin">
+  <mat-card-header>
+    <h3 i18n=@@User-Profile>User Profile</h3>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form">
+      <div class="form-container">
+        <div class="mdl-grid full-width">
+          <!-- Parent Grid End -->
+          <div class="mdl-cell mdl-cell--4-col partial-width">
+            <div class="header-info my-info" i18n=@@My-Info>My Info</div>
+            <div class="mdl-grid">
+
+              <div class="form-field disable-input displayWidth">
+                <div class="fields-container field-set-height">
+                  <label i18n=@@User-Name class="form-label">Name</label>
+                  <div class="form-field-container">
+                    {{name}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field disable-input displayWidth">
+                <div class="fields-container field-set-height">
+                  <label i18n=@@User-Phone class="form-label">Phone</label>
+                  <div class="form-field-container">
+                    {{phone}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field disable-input displayWidth">
+                <div class="fields-container field-set-height">
+                  <label i18n=@@User-Email class="form-label">Email</label>
+                  <div class="form-field-container">
+                    {{email}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Child Grid Start -->
+          <div class="mdl-cell mdl-cell--4-col partial-width">
+            <div class="header-info" i18n=@@User-Other-Info>Other Info</div>
+            <div class="mdl-grid">
+            </div>
+            <!-- Child Grid End -->
+          </div>
+          <!-- Child Grid Start -->
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

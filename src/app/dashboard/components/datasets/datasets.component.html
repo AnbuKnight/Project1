@@ -1,0 +1,33 @@
+<h2>Datasets</h2>
+<mat-table #table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}}</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <div *ngIf="(column.id!=='column1' && column.id!=='Description')">
+        {{element[column.id]}}
+      </div>
+      <div *ngIf="column.id==='Description'">
+        {{element[column.id]}} mb
+      </div>
+      <div *ngIf="column.id==='column1'">
+        <img src="assets/img/logo.png" class="col1Image">
+      </div>
+      <div *ngIf="column.id==='Action'">
+        <span>
+          <img src="assets/img/logo.png" class="Action1">
+        </span>
+        <span>
+          <img src="assets/img/logo.png" class="Action2">
+        </span>
+        <span>
+          <img src="assets/img/logo.png" class="Action3">
+        </span>
+      </div>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+</mat-paginator>

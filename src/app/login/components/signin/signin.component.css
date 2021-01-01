@@ -1,0 +1,84 @@
+#logo {
+  width: 5%;
+}
+#card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.65);
+  height: 350px;
+  margin: 3rem auto 8.1rem auto;
+  width: 329px;
+}
+#card-content {
+  padding: 12px 44px;
+}
+#card-title {
+  font-family: "Calibri", sans-serif;
+  padding-top: 13px;
+  text-align: center;
+  font-size: 26px;
+  color: #707070;
+}
+#signup {
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 16px;
+  text-align: center;
+}
+#submit-btn {
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #36c3ca;
+  cursor: pointer;
+  color: white;
+  font-family: "Calibri", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #36c3ca;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  background: -webkit-linear-gradient(right, #7bd5f7, #0062cc);
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  border: none;
+  outline: none;
+  padding-top: 14px;
+  color: #928e8e;
+  font-size: 24px;
+  left: 21px;
+  position: relative;
+  width: 220px;
+}
+.form-content i {
+  position: absolute;
+  left: -19px;
+  top: 34px;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("../../../../assets/img/data-management.png");
+
+  min-height: 400px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

@@ -1,0 +1,122 @@
+.logo
+{
+    width: 25%;
+}
+.dataSetContainer
+{
+    padding: 16px;
+    background-color:lightgrey;
+    border-radius: 25px;
+}
+.toolBar
+{
+display: block;
+}
+
+.breadcrumb {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+.uploadButton
+{
+    background-color: dodgerblue;
+}
+
+.breadcrumbLine
+{
+    width:100%;
+    text-align:left;
+    margin-left:0
+}
+
+mat-slider {
+    width: 100%;
+  }
+
+::ng-deep .mat-slider-thumb {
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-slider-ticks
+{
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-slider-thumb-label
+{
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{    
+    border-radius: 15px 16px 15px 15px !important;
+}
+
+::ng-deep .mat-form-field-flex
+{
+    border: 1px solid dodgerblue;    
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{
+    padding: 0em 0em 0em 0em !important;
+}
+
+::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label
+{
+    display: none !important;
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label
+{
+    margin: 0px 0px 0px 10px;
+}
+
+::ng-deep mat-slider.mat-slider.mat-focus-indicator.mat-accent.mat-slider-has-ticks.mat-slider-horizontal.mat-slider-thumb-label-showing.mat-slider-min-value
+{
+    margin:-45px 0px 0px 0px;
+}
+
+::ng-deep mat-slider.mat-slider.mat-focus-indicator.mat-accent.mat-slider-has-ticks.mat-slider-horizontal.mat-slider-thumb-label-showing {
+    margin: -45px 0px 0px 0px;
+}
+
+.filterCard
+{
+    border-radius: 15px 16px 15px 15px !important;
+}
+
+.sliderMin
+{
+    background-color: dodgerblue;
+    min-width: 38px;
+    line-height: 25px;
+}
+
+.sliderMax
+{
+    background-color: dodgerblue;
+    min-width: 38px;
+    line-height: 25px;
+}
+
+.sliderButtons
+{
+    margin: -25px 0px 0px 0px;
+}
+
+.matSearch
+{
+    float: right;
+    margin: -20px 0px 0px 0px;
+}
+::ng-deep .mat-tab-body-wrapper {
+    margin-bottom: 1.5rem !important;
+}

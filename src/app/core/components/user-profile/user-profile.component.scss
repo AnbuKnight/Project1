@@ -1,0 +1,66 @@
+.header-info {
+  font-size: 18px;
+  margin-top: -10px;
+  height: 20px;
+}
+
+.header-info.my-info {
+  padding-left: 10px;
+}
+
+.mat-card-header {
+  margin: 15px 0px;
+}
+
+.fields-container {
+  .material-select.mat-form-field {
+    margin: 10px 0px;
+    
+  }
+}
+
+// @media only screen and (max-width: 500px) {
+//   .mdl-cell--4-col {
+//     margin: 15px;
+//   }
+// }
+
+.refresh-button {
+  float: left;
+}
+
+.href-link {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  margin-left: 13%;
+}
+
+.user-info {
+  padding-left: 1%;
+}
+
+.href-link-disabled {
+  text-decoration: underline;
+  color: gray;
+  cursor: not-allowed;
+  margin-left: 13%;
+}
+
+
+.partial-width{
+  width: 50%;
+}
+
+.refreshdiv {
+  margin-left: 2%;
+}
+
+.redirectdiv {
+  min-width: 23%;
+}
+
+.displayWidth {
+  min-width: 94%;
+}
+

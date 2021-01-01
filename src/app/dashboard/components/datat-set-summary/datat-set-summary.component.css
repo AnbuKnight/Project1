@@ -1,0 +1,108 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.data-summary {
+  font-family: Calibri;
+  font-size: 36;
+  color: #3c3c41;
+}
+.label-heading {
+  font-family: Calibri;
+  font-size: 20;
+  color: #acabab;
+}
+.content {
+  font-family: Calibri;
+  font-size: 20;
+  color: #3c3c41;
+}
+.content2 {
+  font-family: Calibri;
+  font-size: 18;
+  color: #3c3c41;
+}
+.content1 {
+  font-family: Calibri;
+  font-size: 24;
+  color: #3c3c41;
+}
+.badge-circle {
+  border-radius: 50% !important;
+  padding: 1rem !important;
+}
+.badge-rows {
+  background-color: #9ADB81;
+}
+.badge-features {
+  background-color: #FB9A67;
+}
+.badge-dependency {
+  background-color: #EC7F80;
+}
+.badge-accuracy {
+  background-color: #61A3F8;
+}
+.col1Image
+ {
+    width: 20%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+ }
+ .mat-column-column1
+ {
+    flex: 0 0 11% !important;
+ }
+ .mat-column-Filesize
+ {
+    justify-content: center;
+ }
+ .mat-column-Dependency
+ {
+    justify-content: center;
+ }
+ .mat-column-Accuracy
+ {
+    justify-content: center;
+ }
+ .Action1
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+ }
+ .Action2
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+ }
+ .Action3
+ {
+    width: 15%;
+    background: white;
+    border-color: black;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+ }
+ .mat-table.mat-table.cdk-table
+ {
+    background: rgba(0, 0, 0, 0);
+ }
+ ::ng-deep .mat-paginator-container {
+    background-color: lightgray !important;
+}
+
+.mat-row:hover {
+   background-color: white;
+ }

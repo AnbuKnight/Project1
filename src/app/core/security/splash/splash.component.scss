@@ -1,0 +1,37 @@
+// Authentication loading Background img css starts here 
+
+.landing-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .landing-background img{
+    max-width: 100%;
+    min-height: 100%;
+  }
+  
+  .img-background {
+    float: left;
+    width: 70%;
+    height: 100%;
+   
+  }
+  
+  .img-logo { 
+    float: left;
+    width: 28%;
+    margin-top: 3%;
+    margin-left: 10px;
+  }
+  
+
+  
+  .content-login {
+    position: absolute;
+    font-weight: bold;
+    top: 40%;
+    left: 30%;
+  }
+  
+  // ends here

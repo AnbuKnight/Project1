@@ -1,0 +1,50 @@
+<mat-nav-list>
+  <mat-list-item [tabindex]="1" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="home">
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-home"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Home</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="2" routerLinkActive="active-link" (click)="closeSideNav()">
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}" target="_blank" href="{{redirectToOutSystem}}">
+      <em class="icon-new-configuration"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Configuration</span> 
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="3" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="kit" *ngxPermissionsOnly="kitUserRoles">
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-kit-production"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Kit Production</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="4" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="logistics" *ngxPermissionsOnly="shipmentRoles">
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-logistics"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Logistics</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="5" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="accessioning" >
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-checkout icon-size"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Accessioning</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="6" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="data-management" >
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-data-management"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Data Management</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="7" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="communications-center" >
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-communication_center"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Communications Center</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item [tabindex]="8" routerLinkActive="active-link" (click)="closeSideNav()" routerLink="billing" >
+    <a mat-button class="sideBar-nav-links {{isExpanded ? 'sideBar-nav-text-links': 'sideBar-nav-icon-links'}}">
+      <em class="icon-new-billing"></em>
+      <span class="sideBar-nav-links-text" *ngIf="isMobileView || isExpanded" i18n>Billing</span>
+    </a>
+  </mat-list-item>
+</mat-nav-list>

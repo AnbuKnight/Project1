@@ -1,0 +1,88 @@
+<div class="container">
+    <h3 class="data-summary font-weight-bold"> Data Summary</h3>
+    <div class="card">
+        <div class="card-body pb-0">
+            <div class="row">
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+                    <label class="label-heading">Dataset Name:</label>
+                    <span class="content"> {{dataSet.strName}} <b class="content1"> Ready to use</b></span>
+                </div>
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4 text-center">
+                    <label class="label-heading">File size:</label>
+                    <span class="content"> {{dataSet.strSize}}</span>
+                </div>
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4 mx-auto">
+                    <label class="label-heading">Store Paths:</label>
+                    <span class="content"> {{dataSet.strPaths}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+                    <label class="label-heading">Created Date:</label>
+                    <span class="content"> {{dataSet.dtCreatedDate}}</span>
+                </div>
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4 text-center">
+                    <label class="label-heading">Updated Date:</label>
+                    <span class="content"> {{dataSet.dtUpdatedDate}}</span>
+                </div>
+                <div class="col-4 col-lg-4 col-md-4 col-sm-4 mx-auto">
+                    <label class="label-heading">All Access Group:</label>
+                    <span class="content"><b>{{dataSet.strAccessGroup}}</b></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-3 col-lg-3 col-md-3 col-sm-3 text-center">
+                    <span class="badge badge-circle badge-rows content1">{{dataSet.rows}}</span>
+                    <p class="content2">#Rows</p>
+                </div>
+                <div class="col-3 col-lg-3 col-md-3 col-sm-3 text-center">
+                    <span class="badge badge-circle badge-features content1">{{dataSet.features}}</span>
+                    <p class="content2">#Features</p>
+                </div>
+                <div class="col-3 col-lg-3 col-md-3 col-sm-3 text-center">
+                    <span class="badge badge-circle badge-dependency content1">{{dataSet.dependency}}</span>
+                    <p class="content2">#Dependency</p>
+                </div>
+                <div class="col-3 col-lg-3 col-md-3 col-sm-3 text-center">
+                    <span class="badge badge-circle badge-accuracy content1">{{dataSet.accuracy}}%</span>
+                    <p class="content2">#Accuracy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="data-summary mt-5 font-weight-bold"> Feature Insights</h3>
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}}</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <div *ngIf="(column.id!=='column1' && column.id!=='Filesize')">
+                    {{element[column.id]}}
+                </div>
+                <div *ngIf="column.id==='Filesize'">
+                    {{element[column.id]}} mb
+                </div>
+                <div *ngIf="column.id==='column1'">
+                    <img src="assets/img/logo.png" class="col1Image">
+                </div>
+                <div *ngIf="column.id==='Action'">
+                    <span>
+                        <img src="assets/img/logo.png" class="Action1">
+                    </span>
+                    <span>
+                        <img src="assets/img/logo.png" class="Action2">
+                    </span>
+                    <span>
+                        <img src="assets/img/logo.png" class="Action3">
+                    </span>
+                </div>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+    </mat-paginator>
+</div>

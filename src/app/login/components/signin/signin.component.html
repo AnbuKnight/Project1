@@ -1,0 +1,35 @@
+<main id="maincnt">
+    <div class="ml-3 mt-3">
+        <img src="assets/img/logo.png" id="logo">
+    </div>
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="bg-img">
+                <div class="float-right">
+                    <div id="card">
+                        <div id="card-content">
+                            <div id="card-title">
+                                <b>Login</b>
+                            </div>
+                            <form method="post" class="form" [formGroup]="loginForm" (submit)="login()" autocomplete="off">
+                                <fieldset class="form-content">
+                                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <input id="user-email" class="form-content" type="text" placeholder="User Name" formControlName="email"
+                                        name="email" required />
+                                </fieldset>
+                                <div class="form-border"></div>
+                                <fieldset class="form-content">
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                    <input id="user-password" class="form-content" type="password" formControlName="password"
+                                        placeholder="Password" name="password" required />
+                                </fieldset>
+                                <div class="form-border"></div>
+                                <button id="submit-btn" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
