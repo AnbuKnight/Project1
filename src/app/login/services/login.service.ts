@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -14,6 +14,7 @@ export class LoginService {
   private id: number;
   private permissionsForRole = [];
   private permissionLoaded = false;
+  @Output() IsUserLoggedIn: EventEmitter<any> = new EventEmitter<any>();
 
   isUserLoggedIn(): boolean {
     return this.isloggedIn;
@@ -33,6 +34,7 @@ export class LoginService {
           this.isloggedIn = true;
           this.id = users[i].id;
           this.role = users[i].role;
+          this.IsUserLoggedIn.emit(true);
         } else {
           this.isloggedIn = false;
           this.id = 0;
@@ -71,7 +73,10 @@ export class LoginService {
     const apiUrl = './assets/permissions.json';
     return this.http.get(apiUrl)
       .pipe(map((res: any) => res as rolesAndPermission[]));
+  }
 
+  getEmitter() { 
+    return this.IsUserLoggedIn; 
   }
 }
 export interface USERS1 {

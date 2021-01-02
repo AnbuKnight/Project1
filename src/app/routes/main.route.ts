@@ -6,5 +6,9 @@ export const MAIN_ROUTES: Routes = [
       path: '',
       redirectTo: '',
       pathMatch: 'full'
+    },
+    {
+      path: '',
+      loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
     }
   ];

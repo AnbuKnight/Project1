@@ -53,7 +53,7 @@
     </div>
 
     <h3 class="data-summary mt-5 font-weight-bold"> Feature Insights</h3>
-    <mat-table #table [dataSource]="dataSource">
+    <mat-table #table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
             <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}}</mat-header-cell>
             <mat-cell *matCellDef="let element">

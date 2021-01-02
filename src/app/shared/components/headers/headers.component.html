@@ -1,93 +1,22 @@
 <!-- <p>headers works!</p> -->
 <!-- <app-header fxLayout="column"></app-header> -->
 
-<mat-toolbar [ngClass]="{'toolBar': true}">
-  <mat-tab-group (selectedTabChange)="tabChange($event)">
-    <mat-tab disabled>
-      <ng-template mat-tab-label disabled>
-        <img src="assets/img/logo.png" class="logo">
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Home" class="mt-4">
-    </mat-tab>
-    <mat-tab label="DataSet" >
-      <ng-container class="mt-4">
-        <div class="col-lg-12 dataSetContainer row">
-          <div class="breadcrumb col-lg-9">
-            <div class="col-lg-2">
-              Home >> Dataset
-            </div>
-            <div class="col-lg-8">
-              <hr class="breadcrumbLine">
-            </div>
-            <div class="col-lg-2">
-              <button class="uploadButton" mat-raised-button color="accent">Upload<mat-icon>unarchive</mat-icon>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-3" style="margin: 15px 0px 0px 0px;">
-            <h2>Filters <mat-icon> info </mat-icon></h2>            
-          </div>
-          <div class="col-lg-12 row" style="margin: -21px 0px 0px 0px;">
-          <div class="col-lg-9" style="display: inline-block;">
-            <app-datasets></app-datasets>
-          </div>
-          <div class="col-lg-3" style="display: inline-block;">            
-            <mat-card class="filterCard">
-              <mat-card-content>
-                Group
-              </mat-card-content>
-              <mat-divider></mat-divider>
-              <mat-card-content>
-                <p style="margin: 30px 0px -5px 0px;">Dataset Name</p>                
-                <mat-icon class="matSearch">search</mat-icon>
-              </mat-card-content>
-              <mat-divider></mat-divider>
-              <mat-card-content>
-                <p>Accuracy (%)</p>
-                <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="5" min="1" max="50">
-                </mat-slider>
-                <div class="sliderButtons">
-                  <button class="sliderMin" mat-raised-button>0</button>
-                  <button class="sliderMax" style="float: right;" mat-raised-button>50</button>
-                </div>
-              </mat-card-content>
-              <mat-divider></mat-divider>
-              <mat-card-content>
-                Status
-              </mat-card-content>
-              <mat-divider></mat-divider>
-              <mat-card-content >
-                <p>Date Range</p>
-                <div style="text-align: center;">                  
-                    <mat-form-field appearance="fill">
-                      <mat-label>From</mat-label>
-                      <input matInput [matDatepicker]="fromPicker">
-                      <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
-                      <mat-datepicker #fromPicker></mat-datepicker>
-                    </mat-form-field>
-                </div>
-                <div style="text-align: center;">
-                  <mat-form-field appearance="fill">
-                    <mat-label>To</mat-label>
-                    <input matInput [matDatepicker]="toPicker">
-                    <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
-                    <mat-datepicker #toPicker></mat-datepicker>
-                  </mat-form-field>
-                </div>
-              </mat-card-content>
-              <mat-divider></mat-divider>
-              <mat-card-actions style="text-align: center;">
-                <button class="uploadButton" mat-raised-button>Apply</button>
-              </mat-card-actions>
-            </mat-card>
-          </div>
-        </div>
-        </div>
-      </ng-container>
-    </mat-tab>
-    <mat-tab label="Discovery" class="mt-4"> Content 3 </mat-tab>
-    <mat-tab label="Insights" class="mt-4"> Content 3 </mat-tab>
-    <mat-tab label="Admin" class="mt-4"> Content 3 </mat-tab>
-  </mat-tab-group>
-</mat-toolbar>
+<nav *ngIf="isUserLoggedin" class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li style="margin: 0 -80px 0 0;"><img src="assets/img/logo.png" class="logo"></li>
+      <li [ngClass]="{ 'active':activeTab==='home'}"><a href="javascript: void(0);"
+          (click)="loadScreen('dashboard')">Home</a></li>
+      <li [ngClass]="{ 'active':activeTab==='dataSet'}"><a href="javascript: void(0);"
+          (click)="loadScreen('dataSet')">DataSet</a></li>
+      <li><a href="#">Discovery</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Admin</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-th"></span></a></li>
+      <li><a href="#"><i class="fa fa-bell"></i><span class="counter counter-lg">99</span></a></li>
+      <li><a href="#">UserName</a></li>
+    </ul>
+  </div>
+</nav>

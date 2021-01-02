@@ -16,11 +16,11 @@ table {
  {
     justify-content: center;
  }
- .mat-column-Dependency
+ .mat-column-uniquedata
  {
     justify-content: center;
  }
- .mat-column-Accuracy
+ .mat-column-MissingData
  {
     justify-content: center;
  }
@@ -57,4 +57,133 @@ table {
 
 .mat-row:hover {
    background-color: white;
+ }
+
+ .dataSetContainer
+{
+    padding: 16px;
+    background-color:lightgrey;
+    border-radius: 25px;
+    margin: 0 0 0 0;
+}
+
+.containerPadding
+{
+   padding: 0 15px 0 15px;
+}
+
+.toolBar
+{
+display: block;
+}
+
+.breadcrumb {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+.uploadButton
+{
+    background-color: dodgerblue;
+}
+
+.breadcrumbLine
+{
+    width:100%;
+    text-align:left;
+    margin-left:0
+}
+
+mat-slider {
+    width: 100%;
+  }
+
+::ng-deep .mat-slider-thumb {
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-slider-ticks
+{
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-slider-thumb-label
+{
+    background-color: dodgerblue !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{    
+    border-radius: 15px 16px 15px 15px !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{
+    padding: 0em 0em 0em 0em !important;
+}
+
+::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label
+{
+    display: none !important;
+}
+
+::ng-deep .mat-form-field-empty.mat-form-field-label
+{
+    margin: 0px 0px 0px 10px;
+}
+
+.filterCard
+{
+    border-radius: 15px 16px 15px 15px !important;
+}
+
+.sliderMin
+{
+    background-color: dodgerblue;
+    min-width: 38px;
+    line-height: 25px;
+}
+
+.sliderMax
+{
+    background-color: dodgerblue;
+    min-width: 38px;
+    line-height: 25px;
+}
+
+.sliderButtons
+{
+    margin: -8px 0px 0px 0px;
+}
+
+.matSearch
+{
+    float: right;
+    margin: -20px 0px 0px 0px;
+}
+::ng-deep .mat-tab-body-wrapper {
+    margin-bottom: 1.5rem !important;
+}
+
+.filterSectionSubHeader
+{
+   margin: 30px 0px -5px 0px !important;
+}
+
+::ng-deep .mat-form-field
+{
+   width: 100%;
+   margin: 10px 0 0 0;
+}
+
+.h3Font {
+   font-family: Calibri;
+   font-size: 36;
+   color: #3c3c41;
  }

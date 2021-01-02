@@ -2,7 +2,6 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
 import { MatSnackBar, MatSnackBarRef, MatSnackBarConfig} from '@angular/material/snack-bar';
 import { NotificationComponent } from './notification.component';
 import { NotificationData } from './notification-model';
-import {SharedModule} from '../shared.module';
 
 @Injectable()
 export class NotificationService {

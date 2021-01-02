@@ -23,7 +23,8 @@ export class SigninComponent implements OnInit {
     this.loginService.getfromJSON(this.loginForm.controls.email.value, this.loginForm.controls.password.value).subscribe(
       authenticated => {
           if (authenticated[0] !== 0) {
-              this.router.navigateByUrl('/dashboard');
+              // this.router.navigateByUrl('/dashboard');
+              this.router.navigateByUrl('/dataSet');
           } else {
             console.log(authenticated);
             this.router.navigateByUrl('/unauthorized');

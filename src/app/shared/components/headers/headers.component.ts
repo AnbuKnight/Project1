@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SharedModule} from '../../shared.module';
+import { Router } from '@angular/router';
+import { LoginService } from '../../../login/services/login.service';
 
 @Component({
   selector: 'app-headers',
@@ -7,22 +8,35 @@ import {SharedModule} from '../../shared.module';
   styleUrls: ['./headers.component.css']
 })
 export class HeadersComponent implements OnInit {
-public applyTabStyle:boolean=false;
-  constructor() { }
+  public applyTabStyle: boolean = false;
+  public isUserLoggedin: boolean = false;
+  public activeTab: string = 'dataSet';
+  constructor(private router: Router, private loginService: LoginService) {
+  }
 
   ngOnInit(): void {
+    this.loginService.getEmitter().subscribe((isUserLoggedIn) => {
+      this.isUserLoggedin = isUserLoggedIn;
+    });
   }
 
-  tabChange(event:any)
-  {
-    this.applyTabStyle=true;
+  tabChange(event: any) {
+    this.applyTabStyle = true;
   }
 
-  formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
+  loadScreen(input: any) {
+    switch (input) {
+      case 'dataSet':
+        this.activeTab = 'dataSet';
+        this.router.navigateByUrl('/dataSet');
+        break;
+      case 'dashboard':
+        this.activeTab = 'home';
+        this.router.navigateByUrl('/dashboard');
+        break;
+      default:
+        this.router.navigateByUrl('/dataSet');
+        break;
     }
-    return value;
   }
-
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import {DashboardModule} from '../../dashboard.module';
+
 
 @Component({
   selector: 'app-datasets',
@@ -56,6 +56,13 @@ export class DatasetsComponent implements OnInit {
     { FeatureName: '/epistle dataset', Description: 100, datatype: '01/30/2020 12.01 am', uniquedata: 9, MissingData: 40 },
     ];
     this.dataSource = new MatTableDataSource(tableArr);
+  }
+
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+    return value;
   }
 
 }
