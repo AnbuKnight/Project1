@@ -11,12 +11,9 @@ import { RouterModule } from '@angular/router';
 import { DASHBOARD_ROUTES } from '../routes/dashboard.route';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import{SharedModule} from '../shared/shared.module';
+import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
 
 @NgModule({
   declarations: [DashboardComponent, DatatSetSummaryComponent, DatasetsComponent],
@@ -28,12 +25,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatPaginatorModule,    
     MatButtonModule,
     MatIconModule,
-    MatDividerModule,
-    MatSliderModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatNativeDateModule,
+    MatButtonToggleModule,
+    SharedModule,
+    NgDynamicBreadcrumbModule,
     RouterModule.forChild(DASHBOARD_ROUTES),
   ]
 })

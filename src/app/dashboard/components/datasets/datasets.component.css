@@ -3,46 +3,56 @@ table {
  }
  .col1Image
  {
-    width: 20%;
-    background: white;
+    width: 70%;
+    background:#F5F6FA;
     border-color: black;
     border-radius: 50%;
  }
  .mat-column-column1
  {
-    flex: 0 0 11% !important;
+    flex: 0 0 7% !important;
+ }
+ .mat-column-DatasetName
+ {
+    justify-content: center;
  }
  .mat-column-Filesize
  {
     justify-content: center;
  }
- .mat-column-uniquedata
+ .mat-column-LastUpdatedDate
+ {
+    flex: 0 0 16% !important;
+ }
+ .mat-column-Dependency
  {
     justify-content: center;
  }
- .mat-column-MissingData
+ .mat-column-Accuracy
+ {
+    justify-content: center;
+ }
+ .mat-column-Action
  {
     justify-content: center;
  }
  .Action1
  {
-    width: 15%;
-    background: white;
+    width: 23%;    
     border-color: black;
     border-radius: 50%;
+    margin: 0px 0px 0px 10px;
  }
  .Action2
  {
-    width: 15%;
-    background: white;
+    width: 23%;    
     border-color: black;
     border-radius: 50%;
     margin: 0px 0px 0px 10px;
  }
  .Action3
  {
-    width: 15%;
-    background: white;
+    width: 23%;   
     border-color: black;
     border-radius: 50%;
     margin: 0px 0px 0px 10px;
@@ -62,7 +72,7 @@ table {
  .dataSetContainer
 {
     padding: 16px;
-    background-color:lightgrey;
+    background-color:#F5F6FA;
     border-radius: 25px;
     margin: 0 0 0 0;
 }
@@ -78,16 +88,11 @@ display: block;
 }
 
 .breadcrumb {
-    background-color: lightgrey;
+    background-color: #F5F6FA;
     display: flex;
     align-items: center;
     font-size: 12px;
   }
-
-.uploadButton
-{
-    background-color: dodgerblue;
-}
 
 .breadcrumbLine
 {
@@ -138,30 +143,6 @@ mat-slider {
     margin: 0px 0px 0px 10px;
 }
 
-.filterCard
-{
-    border-radius: 15px 16px 15px 15px !important;
-}
-
-.sliderMin
-{
-    background-color: dodgerblue;
-    min-width: 38px;
-    line-height: 25px;
-}
-
-.sliderMax
-{
-    background-color: dodgerblue;
-    min-width: 38px;
-    line-height: 25px;
-}
-
-.sliderButtons
-{
-    margin: -8px 0px 0px 0px;
-}
-
 .matSearch
 {
     float: right;
@@ -171,19 +152,50 @@ mat-slider {
     margin-bottom: 1.5rem !important;
 }
 
-.filterSectionSubHeader
-{
-   margin: 30px 0px -5px 0px !important;
-}
-
 ::ng-deep .mat-form-field
 {
    width: 100%;
    margin: 10px 0 0 0;
 }
 
-.h3Font {
-   font-family: Calibri;
-   font-size: 36;
-   color: #3c3c41;
- }
+.columnHeader
+{
+    color: #b8b9bc;
+    font-size: 18px;
+    font-family: Calibri;
+    text-decoration: none;
+}
+.uploadButton
+{
+    background-color: #2683FC;
+    font-size: 18px;
+    font-family: Calibri;
+    color:#FFFFFF;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0em 0em 0em 1em !important;
+    background: transparent;
+    border-style: solid;
+    border-color: #2683FC;
+}
+::ng-deep .mat-datepicker-toggle-default-icon
+{
+    color:#2683FC;
+}
+::ng-deep .row {
+    display: block;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.filterSection
+{
+    max-width: 90%;
+    margin: 0 0 0 33px; 
+}
+.dataSetNameFontStyle
+{
+    color:#3C3C41;
+    text-decoration-color:#3C3C41;
+    text-decoration: underline;
+}

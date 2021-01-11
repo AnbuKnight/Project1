@@ -7,6 +7,7 @@ import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import {HeadersComponent} from './shared/components/headers/headers.component';
+import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HeadersComponent} from './shared/components/headers/headers.component';
     AppRoutingModule,
     AppBootstrapModule,
     HttpClientModule,
-    MaterialModule      
+    MaterialModule,
+    NgDynamicBreadcrumbModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

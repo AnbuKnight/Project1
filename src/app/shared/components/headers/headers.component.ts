@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../../../login/services/login.service';
 
 @Component({
   selector: 'app-headers',
@@ -8,16 +7,12 @@ import { LoginService } from '../../../login/services/login.service';
   styleUrls: ['./headers.component.css']
 })
 export class HeadersComponent implements OnInit {
-  public applyTabStyle: boolean = false;
-  public isUserLoggedin: boolean = false;
+  public applyTabStyle: boolean = false;  
   public activeTab: string = 'dataSet';
-  constructor(private router: Router, private loginService: LoginService) {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
-    this.loginService.getEmitter().subscribe((isUserLoggedIn) => {
-      this.isUserLoggedin = isUserLoggedIn;
-    });
   }
 
   tabChange(event: any) {

@@ -1,0 +1,77 @@
+.filterCard
+{
+    border-radius: 15px 16px 15px 15px !important;
+}
+.filterSectionGroup
+{
+    font-family: Calibri;
+    font-size: 20px;
+    color:#3C3C41;
+}
+.filterSectionSubHeader
+{
+   margin: 30px 0px -5px 0px !important;
+   font-family: Calibri;
+   font-size: 20px;
+   color:#3C3C41;
+}
+.sliderButtons
+{
+    margin: -8px 0px 0px 0px;
+}
+.sliderMin
+{
+    background-color: #2683FC;
+    min-width: 38px;
+    line-height: 25px;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+.sliderMax
+{
+    background-color: #2683FC;
+    min-width: 38px;
+    line-height: 25px;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+.applyButton
+{
+    font-family: Calibri;
+    font-size: 18px;
+    color:#FFFFFF;
+    background-color: #2683FC;
+}
+.search
+{
+    color: #2683FC;
+    margin: -15px 0px -5px 0px !important;
+    float: right;
+}
+::ng-deep .mat-slider-horizontal
+{
+    width: 100%;
+}
+.infoIcon
+ {
+    width: 5%;
+    background:#F5F6FA;
+    border-color: black;
+    border-radius: 50%;
+ }
+ .datePickerFont
+ {
+    font-family: Calibri;
+    font-size: 18px;
+    color:#BDC0C6;
+ }
+ ::ng-deep .mat-form-field-infix
+ {
+    font-family: Calibri;
+    font-size: 18px;
+    color:#BDC0C6;
+ }

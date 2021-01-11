@@ -1,9 +1,9 @@
 <!-- <p>headers works!</p> -->
 <!-- <app-header fxLayout="column"></app-header> -->
 
-<nav *ngIf="isUserLoggedin" class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav fontStyle navbarFont">
       <li style="margin: 0 -80px 0 0;"><img src="assets/img/logo.png" class="logo"></li>
       <li [ngClass]="{ 'active':activeTab==='home'}"><a href="javascript: void(0);"
           (click)="loadScreen('dashboard')">Home</a></li>
@@ -16,7 +16,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-th"></span></a></li>
       <li><a href="#"><i class="fa fa-bell"></i><span class="counter counter-lg">99</span></a></li>
-      <li><a href="#">UserName</a></li>
+      <li><a href="#" class="userNameStyle">UserName</a></li>
     </ul>
   </div>
 </nav>

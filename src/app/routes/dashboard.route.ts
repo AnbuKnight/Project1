@@ -4,7 +4,41 @@ import { DatatSetSummaryComponent } from '../dashboard/components/datat-set-summ
 import { UnauthorizedComponent } from '../login/components/unauthorized/unauthorized.component';
 
 export const DASHBOARD_ROUTES: Routes = [
-     { path: 'dataSet', component: DatasetsComponent },
-     { path: 'dashboard', component: DatatSetSummaryComponent },
+     { path: 'dataSet', component: DatasetsComponent,
+     data: {
+      title: 'dataSet',
+      breadcrumb: [
+        {
+          label: 'Home',
+          url: ''  
+        },
+        {
+         label: 'Dataset',
+         url: '/dataSet'  
+       }
+      ]
+    }  },
+     { path: 'dashboard', component: DatatSetSummaryComponent,
+     data: {
+      title: 'dataSet',
+      breadcrumb: [
+        {
+          label: 'Home',
+          url: ''  
+        },
+        {
+         label: 'Dataset',
+         url: '/dataSet'  
+       },
+       {
+         label: 'DS Code',
+         url: ''  
+       },
+       {
+         label: 'Summary',
+         url: ''  
+       }
+      ]
+    }},
      { path: 'unauthorized', component: UnauthorizedComponent },
   ];

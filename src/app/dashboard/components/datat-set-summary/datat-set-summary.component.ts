@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import {DashboardModule} from '../../dashboard.module';
+import { DashboardModule } from '../../dashboard.module';
 
 @Component({
   selector: 'app-datat-set-summary',
@@ -26,26 +26,23 @@ export class DatatSetSummaryComponent implements OnInit {
   dataSource: any;
   displayedColumns = [];
   columnNames = [{
-    id: 'column1',
-    value: '',
+    id: 'FeatureName',
+    value: 'Feature Name',
   }, {
-    id: 'DatasetName',
-    value: 'Dataset Name',
-  }, {
-    id: 'Filesize',
-    value: 'File size',
+    id: 'Description',
+    value: 'Description',
   },
   {
-    id: 'LastUpdatedDate',
-    value: 'Last Updated Date',
+    id: 'DataType',
+    value: 'Data Type',
   },
   {
-    id: 'Dependency',
-    value: 'Dependency',
+    id: 'UniqueData',
+    value: 'Unique Data(%)',
   },
   {
-    id: 'Accuracy',
-    value: 'Accuracy(%)',
+    id: 'MissingData',
+    value: 'Missing Data(%)',
   },
   {
     id: 'Action',
@@ -59,21 +56,19 @@ export class DatatSetSummaryComponent implements OnInit {
     this.createTable();
   }
   createTable() {
-    let tableArr: Element[] = [{ DatasetName: '/epistle dataset', Filesize: 100, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 12, Accuracy: 90 },
-    { DatasetName: 'mc/membem', Filesize: 50, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 0, Accuracy: 20 },
-    { DatasetName: '/epistle dataset', Filesize: 100, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 9, Accuracy: 40 },
-    { DatasetName: '/epistle dataset', Filesize: 100, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 12, Accuracy: 90 },
-    { DatasetName: '/epistle dataset', Filesize: 100, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 12, Accuracy: 90 },
-    { DatasetName: '/epistle dataset', Filesize: 100, LastUpdatedDate: '01/30/2020 12.01 am', Dependency: 9, Accuracy: 40 },
+    let tableArr: Element[] = [{ FeatureName: 'Episode ID', Description: 'This as one dataset this is main', DataType: 'Numeric', UniqueData: 100, MissingData: 0 },
+    { FeatureName: 'Speceity', Description: 'This as Spailty lode', DataType: 'String', UniqueData: 10, MissingData: 2 },
+    { FeatureName: 'Los', Description: 'Length of Stay', DataType: 'Number', UniqueData: 50, MissingData: 10 },
+
     ];
     this.dataSource = new MatTableDataSource(tableArr);
   }
 
 }
 export interface Element {
-  DatasetName: string,
-  Filesize: number,
-  LastUpdatedDate: string,
-  Dependency: number,
-  Accuracy: number,
+  FeatureName: string,
+  Description: string,
+  DataType: string,
+  UniqueData: number,
+  MissingData: number,
 }

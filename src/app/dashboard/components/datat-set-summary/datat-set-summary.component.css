@@ -10,27 +10,27 @@
 }
 .data-summary {
   font-family: Calibri;
-  font-size: 36;
-  color: #3c3c41;
+  font-size: 36px;
+  color: #3c3c41;  
 }
 .label-heading {
   font-family: Calibri;
-  font-size: 20;
+  font-size: 20px;
   color: #acabab;
 }
 .content {
   font-family: Calibri;
-  font-size: 20;
+  font-size: 20px !important;
   color: #3c3c41;
 }
 .content2 {
   font-family: Calibri;
-  font-size: 18;
+  font-size: 18px !important;
   color: #3c3c41;
 }
 .content1 {
   font-family: Calibri;
-  font-size: 24;
+  font-size: 24px !important;
   color: #3c3c41;
 }
 .badge-circle {
@@ -60,37 +60,49 @@
  {
     flex: 0 0 11% !important;
  }
- .mat-column-Filesize
+ .mat-column-FeatureName
+ {
+    justify-content: center;
+    font-weight: bold;
+ }
+ .mat-column-Description
+ {
+    justify-content: center;
+    text-align: center;
+ }
+ .mat-column-DataType
  {
     justify-content: center;
  }
- .mat-column-Dependency
+ .mat-column-UniqueData
  {
     justify-content: center;
  }
- .mat-column-Accuracy
+ .mat-column-MissingData
+ {
+    justify-content: center;
+ }
+ .mat-column-Action
  {
     justify-content: center;
  }
  .Action1
  {
-    width: 15%;
-    background: white;
+    width: 23%;    
     border-color: black;
     border-radius: 50%;
+    margin: 0px 0px 0px 10px;
  }
  .Action2
  {
-    width: 15%;
-    background: white;
+    width: 23%;    
     border-color: black;
     border-radius: 50%;
     margin: 0px 0px 0px 10px;
  }
  .Action3
  {
-    width: 15%;
-    background: white;
+    width: 23%;   
     border-color: black;
     border-radius: 50%;
     margin: 0px 0px 0px 10px;
@@ -106,3 +118,57 @@
 .mat-row:hover {
    background-color: white;
  }
+
+ /* ***************** */
+
+ .containerPadding
+{
+   padding: 0 15px 0 15px;
+}
+
+.dataSetContainer
+{
+    padding: 16px;
+    background-color:#F5F6FA;
+    border-radius: 25px;
+    margin: 0 0 0 0;
+}
+
+.breadcrumb {
+  background-color: #F5F6FA;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.breadcrumbLine
+{
+    width:100%;
+    text-align:left;
+    margin-left:0
+}
+
+.summaryButtonStyle
+{
+  color: #FFFFFF;
+  background-color: #2683FC;
+  border-radius: 10px;
+}
+
+.explainButtonStyle
+{
+  color: #3C3C41;
+}
+
+.toggleButton
+{
+  border-radius: 10px;
+}
+
+.columnHeader
+{
+    color: #b9babd;
+    font-size: 18px;
+    font-family: Calibri;
+    text-decoration: none;
+}

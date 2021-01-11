@@ -7,6 +7,4 @@ import { UnauthorizedComponent } from '../login/components/unauthorized/unauthor
 export const LOGIN_ROUTES: Routes = [
      { path: '', component: SigninComponent },
      { path: 'unauthorized', component: UnauthorizedComponent },
-     { path: 'dashboard', component: DatatSetSummaryComponent },
-     { path: 'dataSet', component: DatasetsComponent },
   ];

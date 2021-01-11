@@ -2,7 +2,6 @@
 {
     width: 25%;
 }
-
 ::ng-deep .navbar-nav {
     display: flex;
     flex-direction: inherit;   
@@ -10,7 +9,6 @@
     margin-bottom: 0;
     list-style: none;
 }
-
 ::ng-deep .navbar .container-fluid
 {
     display: inline-block;
@@ -18,16 +16,26 @@
     align-items: center;
     justify-content: space-between;
 }
-
 ::ng-deep .navbar-default .navbar-nav>.active>a
 {
-    color: dodgerblue;
-    text-decoration-color: dodgerblue;
+    color:#2683FC;
+    text-decoration-color:#2683FC;
     text-decoration: underline;
     background-color: white;
+    font-weight: bold;
 }
-
 ::ng-deep .navbar-default
 {
     background-color: white;
+}
+.navbarFont
+{
+    font-size: 20px;
+    color:#35363A;
+}
+.userNameStyle
+{
+    font-family: Calibri;
+    font-size: 24px;
+    color:#B8B9BC;
 }

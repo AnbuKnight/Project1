@@ -1,1 +1,48 @@
-<p>filters works!</p>
+<h3 class="pageTitleFont">Filters <span><img src="assets/img/dataset/Group 473.png" class="infoIcon"></span></h3>
+<mat-card class="filterCard">
+  <mat-card-content>
+    <p class="filterSectionGroup">Group</p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="filterSectionSubHeader">Dataset Name</p>
+    <mat-icon class="matSearch search">search</mat-icon>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="filterSectionSubHeader">Accuracy (%)</p>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="5" min="1" max="50">
+    </mat-slider>
+    <div class="sliderButtons">
+      <button class="sliderMin" mat-raised-button>0</button>
+      <button class="sliderMax" style="float: right;" mat-raised-button>50</button>
+    </div>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="filterSectionSubHeader">Status</p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="filterSectionSubHeader">Date Range</p>
+    <div style="text-align: center;">
+      <mat-form-field appearance="fill">
+        <mat-label class="datePickerFont">From</mat-label>
+        <input matInput [matDatepicker]="fromPicker">
+        <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fromPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div style="text-align: center;">
+      <mat-form-field appearance="fill">
+        <mat-label class="datePickerFont">To</mat-label>
+        <input matInput [matDatepicker]="toPicker">
+        <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+        <mat-datepicker #toPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions style="text-align: center;">
+    <button class="applyButton" mat-raised-button>Apply</button>
+  </mat-card-actions>
+</mat-card>
