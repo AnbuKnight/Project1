@@ -1,0 +1,62 @@
+ [
+    {
+      "id": 1,
+      "name": "kavitha",
+      "password": "123",
+      "role": ["USER"]
+    },
+    {
+      "id": 2,
+      "name": "arathie",
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 3,
+      "name": "rajeswari",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id":4,
+      "name": "varun",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id": 5,
+      "name": "lekha",
+      "password": "123",
+      "role": "GUEST"
+    },
+    {
+      "id": 6,
+      "name": "harini",
+      "password": "123",
+      "role": "MANAGER"
+    },
+    {
+      "id":7,
+      "name": "seetha",
+      "password": "123",
+      "role": "MANAGER"
+    },
+    {
+      "id": 8,
+      "name": "kirthi",
+      "password": "123",
+      "role": "GUEST"
+    },
+    {
+      "id": 9,
+      "name": "raaga",
+      "password": "123",
+      "role": "USERandAPPROVER"
+    },
+    {
+      "id": 10,
+      "name": "1",
+      "password": "123",
+      "role": ["USER"]
+    }
+  ]
