@@ -14,6 +14,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import{SharedModule} from '../shared/shared.module';
 import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
+import {MatDialogModule} from '@angular/material/dialog';
+import {NgxDropzoneModule} from 'ngx-dropzone';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [DashboardComponent, DatatSetSummaryComponent, DatasetsComponent],
@@ -28,6 +36,15 @@ import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
     MatButtonToggleModule,
     SharedModule,
     NgDynamicBreadcrumbModule,
+    MatDialogModule,
+    NgxDropzoneModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatInputModule,
     RouterModule.forChild(DASHBOARD_ROUTES),
   ]
 })

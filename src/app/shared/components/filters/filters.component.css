@@ -75,3 +75,17 @@
     font-size: 18px;
     color:#BDC0C6;
  }
+ #dateRange ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{    
+    border-radius: 15px 16px 15px 15px !important;
+}
+#dateRange ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
+{
+    padding: 0em 0em 0em 0em !important;
+}
+ #dateRange ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0em 0em 0em 1em !important;
+    background: transparent;
+    border-style: solid;
+    border-color: #2683FC;
+}

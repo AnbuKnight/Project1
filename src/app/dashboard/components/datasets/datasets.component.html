@@ -5,14 +5,16 @@
         <div class="breadcrumb row">
           <div class="col-10 col-lg-10 col-md-10 col-sm-10">
             <div class="col-3 col-lg-3 col-md-3 col-sm-3 breadcrumb">
-              <app-ng-dynamic-breadcrumb [symbol]="' >> '" [bgColor]="'#F5F6FA'" [fontSize]="'18px'" [fontColor]="'#48484D'"></app-ng-dynamic-breadcrumb>
+              <app-ng-dynamic-breadcrumb [symbol]="' >> '" [bgColor]="'#F5F6FA'" [fontSize]="'18px'"
+                [fontColor]="'#48484D'"></app-ng-dynamic-breadcrumb>
             </div>
             <div class="col-9 col-lg-9 col-md-9 col-sm-9" style="margin: 2% 0 0 0%;">
               <hr class="breadcrumbLine">
-            </div>            
+            </div>
           </div>
           <div class="col-2 col-lg-2 col-md-2 col-sm-2">
-            <button class="uploadButton" mat-raised-button color="accent">Upload<mat-icon>unarchive</mat-icon>
+            <button class="uploadButton" mat-raised-button color="accent" (click)="openDialog()">Upload<mat-icon>
+                unarchive</mat-icon>
             </button>
           </div>
         </div>
@@ -31,7 +33,7 @@
                   </div>
                   <div *ngIf="column.id==='DatasetName'">
                     <a href="javascript: void(0);" class="dataSetNameFontStyle"
-                    (click)="loadSummary($event)">{{element[column.id]}}</a>
+                      (click)="loadSummary($event)">{{element[column.id]}}</a>
                   </div>
                   <div *ngIf="column.id==='Filesize'">
                     {{element[column.id]}} mb
@@ -57,6 +59,14 @@
             </mat-table>
             <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
             </mat-paginator>
+
+            <!-- <mat-paginator appPagination [length]="paginatorProperties.length" [pageSize]="paginatorProperties.pageSize"
+            [hidePageSize]='false' (page)="onPageEvent($event)">
+        </mat-paginator> -->
+
+            <!-- <mat-paginator appPagination [length]="testPaginator.length" [pageSize]="testPaginator.pageSize"
+            [pageIndex]='testPaginator.pageIndex' [hidePageSize]='true' (page)="showTestEmit($event)">
+        </mat-paginator> -->
           </div>
         </div>
       </div>
@@ -64,7 +74,87 @@
         <div class="filterSection">
           <app-filters></app-filters>
         </div>
-        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal  popup fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true" [ngClass]="{'in': visibleAnimate}"
+  [ngStyle]="{'display': showDialog ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0}">
+  <div class="addEditClient modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div style="float: left;" class="col-lg-10 col-md-10 col-sm-10 col-xs-10 uploadTitle">
+          <b>Upload Files</b>
+        </div>
+        <div style="float: right;" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <button type="button" class="close" (click)="hide()" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button></div>
+
+      </div>
+      <div class="modal-body">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="row">
+              <ngx-dropzone class="custom-dropzone" (change)="onSelect($event)">
+                <ngx-dropzone-label>
+                  <div class="row">
+                    <img src="assets/img/dataset/Group 480.png" class="uploadPlusIcon">
+                  </div>
+                  <div class="row uploadLabel">
+                    Drag files to upload or Browse
+                  </div>
+                </ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+              </ngx-dropzone>
+            </div>
+            <div class="row">
+              <p class="Notes">Note: Files will be uploaded to default folder for the group</p>
+            </div>
+          </div>
+          <div id='uploadForm' class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <mat-form-field>
+              <mat-select name="group" [(value)]="selectedgroup" placeholder="Group">
+                <mat-option *ngFor="let group of groups" [value]="group.id">
+                  {{group.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <mat-form-field>
+              <mat-select name="privacy" [(value)]="selectedprivacy" placeholder="Privacy">
+                <mat-option *ngFor="let privacy of privacies" [value]="privacy.id">
+                  {{privacy.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <mat-form-field>
+              <mat-select name="department" [(value)]="selecteddepartment" placeholder="Notify Department">
+                <mat-option *ngFor="let department of departments" [value]="department.id">
+                  {{department.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-divider></mat-divider>
+            <mat-label class="inputLabel descriptionLabel">Description</mat-label>
+            <mat-form-field class="textArea" appearance="fill">
+              <textarea matInput [(ngModel)]="description"></textarea>
+            </mat-form-field>
+            <button class="uploadFileButton" mat-raised-button color="accent" (click)="uploadFile()">Upload File
+              <mat-icon>
+                unarchive</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+
       </div>
     </div>
   </div>

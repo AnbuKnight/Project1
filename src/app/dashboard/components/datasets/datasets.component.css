@@ -119,18 +119,8 @@ mat-slider {
     background-color: dodgerblue !important;
 }
 
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
-{    
-    border-radius: 15px 16px 15px 15px !important;
-}
-
 ::ng-deep .mat-form-field-underline {
     display: none;
-}
-
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex 
-{
-    padding: 0em 0em 0em 0em !important;
 }
 
 ::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label
@@ -172,12 +162,7 @@ mat-slider {
     font-family: Calibri;
     color:#FFFFFF;
 }
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-    padding: 0em 0em 0em 1em !important;
-    background: transparent;
-    border-style: solid;
-    border-color: #2683FC;
-}
+
 ::ng-deep .mat-datepicker-toggle-default-icon
 {
     color:#2683FC;
@@ -198,4 +183,121 @@ mat-slider {
     color:#3C3C41;
     text-decoration-color:#3C3C41;
     text-decoration: underline;
+}
+
+.modal {
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-dialog.modal-lg {
+  width: 35%;
+  margin-top: -82px !important;
+  margin-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;  
+}
+
+.modal-body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  text-align: center !important;
+}
+
+.modal-content
+{
+    margin: 35% 0 0 0;
+    width:135%;
+    border-radius: 20px !important;
+}
+.custom-dropzone {
+    height: 250px;
+    border: 0;
+	background: lightgrey;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.Notes
+{
+    font-size: 18px;
+    font-family: Calibri;
+    color:#BDC0C6;
+}
+.uploadPlusIcon
+{
+    background: #F5F6FA;
+    border-color: black;
+    border-radius: 50%;
+}
+.uploadLabel
+{
+    font-size: 18px;
+    font-family: Calibri;
+    color: #35363A;
+    opacity: 74%;
+}
+.uploadTitle
+{
+    font-size: 20px;
+    font-family: Calibri;
+    color: #35363A;
+    font-weight: bold;
+}
+.inputLabel
+{
+    font-size: 18px;
+    font-family: Calibri;
+    color: #35363A;
+    opacity: 65%;
+    font-weight: bold;
+}
+.descriptionLabel
+{
+    margin: 2% 0 0 2%;
+    float: left;
+}
+
+#uploadForm ::ng-deep mat-form-field span.mat-form-field-label-wrapper label {
+    font-size: 18px;
+    font-family: Calibri;
+    color: #35363A;
+    opacity: 65%;
+    font-weight: bold !important;
+}
+#uploadForm ::ng-deep .mat-select-value-text
+{
+    font-size: 18px;
+    font-family: Calibri;
+    color: #35363A;
+    opacity: 65%;
+    font-weight: bold !important;
+}
+::ng-deep span.mat-option-text
+{
+    font-size: 18px;
+    font-family: Calibri;
+    color: #35363A;
+    opacity: 65%;
+    font-weight: bold !important;
+}
+.textArea
+{
+    background-color:#fff !important;
+    border-style: groove;
+}
+
+.uploadFileButton
+{
+    background-color: #2683FC;
+    font-size: 18px;
+    font-family: Calibri;
+    color:#FFFFFF;
+    margin: 2% 0 0 0;
 }
