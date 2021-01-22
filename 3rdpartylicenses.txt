@@ -146,6 +146,9 @@ SOFTWARE.
 
 
 
+ngx-dropzone
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
